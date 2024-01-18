@@ -1,19 +1,32 @@
 const inquirer = require('inquirer');
 const validator = require('validator');
 const fs = require('fs');
-const circle = require('./lib/shapes.js')
-const triangle = require('./lib/shapes.js')
-const square = require('./lib/shapes.js')
+const {Circle, Triangle, Square} = require('./lib/shapes.js')
+
 
 const prompts = [{
         type: 'input',
-        message: 'Enter 3 letters for your logo',
+        message: 'Enter 1 to 3 letters for your logo',
         name: 'text',
+        validate: (input) => {
+            if (!validator.isLength(input, { min: 1, max: 3 })) {
+                return "Text must be 1 to 3 characters";
+            } else {
+                return true;
+            };
+          },
         },
         {
         type: 'input',
-        message: 'Enter a color keyword for your text color',
+        message: 'Enter a hexadecimal number for your text color EXCLUDING #',
         name: 'textColor',
+        validate: (input) => {
+            if (!validator.isAlphanumeric(input)) {
+                return "Must be hexadecimal number EXCLUDING #";
+            } else {
+                return true;
+            };
+        },
         },
         {
         type: 'list',
@@ -23,18 +36,19 @@ const prompts = [{
         },
         {
         type: 'input',
-        message: 'Enter a color keyword for your shape color',
+        message: 'Enter a hexadecimal number for your shape color EXCLUDING #',
         name: 'shapeColor',
+        validate: (input) => {
+            if (!validator.isAlphanumeric(input)) {
+                return "Must be hexadecimal number EXCLUDING #";
+            } else {
+                return true;
+            };
+        },
         }];
 
 function createSVG(data) {
-    const example = new Shape();
-    if (!data.shapeColor) {
-        console.log("Invalid shape color, please start again")
-        return
-    } else {
-        example.setShapeColor(data.shapeColor);
-    }
+    
 };
 
 function init() {
