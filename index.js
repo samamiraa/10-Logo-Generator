@@ -1,6 +1,9 @@
 const inquirer = require('inquirer');
 const validator = require('validator');
 const fs = require('fs');
+const circle = require('./lib/shapes.js')
+const triangle = require('./lib/shapes.js')
+const square = require('./lib/shapes.js')
 
 const prompts = [{
         type: 'input',
