@@ -23,7 +23,13 @@ const prompts = [{
         }];
 
 function createSVG(data) {
-
+    const example = new Shape();
+    if (!data.shapeColor) {
+        console.log("Invalid shape color, please start again")
+        return
+    } else {
+        example.setShapeColor(data.shapeColor);
+    }
 };
 
 function init() {
