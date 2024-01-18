@@ -1,14 +1,12 @@
 class Shape {
-    constructor(shapeColor) {
+    constructor(shapeColor, textColor, text) {
         this.shapeColor = shapeColor;
-    }
-
-    setTextColor(textColor) {
         this.textColor = textColor;
+        this.text = text;
     }
 
     renderText() {
-        return `<text x="10" y="10" text-anchor="middle" font-size="50px">${data.text}</text>`
+        return `<text x="10" y="10" text-anchor="middle" font-size="50px" fill="${this.textColor}">${this.text}</text>`
     }
     
 }
@@ -28,7 +26,7 @@ class Triangle extends Shape {
         super(shapeColor)
     }
 
-    renderTrangle() {
+    renderTriangle() {
         return `'<polygon points="150, 18 244, 182 56, 182" stroke="${this.shapeColor}" fill="${this.shapeColor}" stroke-width="5"/>'`
     }
 }
