@@ -11,7 +11,7 @@ class Shape {
     }
 
     renderText() {
-        return ``
+        return `<text x="10" y="10" text-anchor="middle" font-size="50px">${data.text}</text>`
     }
     
 }

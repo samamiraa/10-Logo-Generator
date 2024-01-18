@@ -1,4 +1,6 @@
 const inquirer = require('inquirer');
+const validator = require('validator');
+const fs = require('fs');
 
 const prompts = [{
         type: 'input',

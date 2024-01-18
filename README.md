@@ -39,6 +39,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 https://www.w3.org/wiki/CSS3/Color/Basic_color_keywords
 https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Texts
+https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-size
 
 ## License
 
