@@ -1,7 +1,8 @@
 const inquirer = require('inquirer');
 const validator = require('validator');
 const fs = require('fs');
-const {Circle, Triangle, Square} = require('./lib/shapes.js')
+const {Circle, Triangle, Square} = require('./lib/shapes.js');
+const { createDiffieHellmanGroup } = require('crypto');
 
 
 const prompts = [{
@@ -49,15 +50,22 @@ const prompts = [{
 
 
 function createSVG(data) {
-    let svgLogo;
-
+    console.log(data.shapeColor);
     if (data.shape === "Triangle") {
+        let svgLogo = new Triangle();
         svgLogo = `
         <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
         ${svgLogo.renderText()}
         ${svgLogo.renderTriangle()}
         </svg>
         `
+        fs.writeFile('logo.svg', svgLogo, (err) => {
+            if (err) {
+                console.log('Unable to write SVG', err);
+            } else {
+                console.log('Generated logo.svg');
+            };
+        })
     } else if (data.shape === "Circle") {
         svgLogo = `
         <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
