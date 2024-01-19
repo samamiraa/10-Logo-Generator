@@ -66,7 +66,9 @@ function createSVG(data) {
    </svg>
    `;
     
-   fs.writeFile('logo.svg', logoFrame, (err) => {
+   const exampleFolderPath = './Examples/logo.svg'
+   
+   fs.writeFile(exampleFolderPath, logoFrame, (err) => {
     if (err) {
         console.log('Unable to write SVG', err);
     } else {
