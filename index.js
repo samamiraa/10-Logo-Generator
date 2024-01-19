@@ -19,11 +19,11 @@ const prompts = [{
         },
         {
         type: 'input',
-        message: 'Enter a hexadecimal number for your text color EXCLUDING #',
+        message: 'Enter a color keyword for your text color',
         name: 'textColor',
         validate: (input) => {
-            if (!validator.isAlphanumeric(input)) {
-                return "Must be hexadecimal number EXCLUDING #";
+            if (!validator.isAlpha(input)) {
+                return "Must be a color keyword";
             } else {
                 return true;
             };
@@ -37,11 +37,11 @@ const prompts = [{
         },
         {
         type: 'input',
-        message: 'Enter a hexadecimal number for your shape color EXCLUDING #',
+        message: 'Enter a color keyword for your shape color',
         name: 'shapeColor',
         validate: (input) => {
-            if (!validator.isAlphanumeric(input)) {
-                return "Must be hexadecimal number EXCLUDING #";
+            if (!validator.isAlpha(input)) {
+                return "Must be a color keyword";
             } else {
                 return true;
             };
