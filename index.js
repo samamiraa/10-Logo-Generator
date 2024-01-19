@@ -6,7 +6,7 @@ const {Circle, Triangle, Square} = require('./lib/shapes.js')
 
 const prompts = [{
         type: 'input',
-        message: 'Enter 1 to 3 letters for your logo',
+        message: 'Enter 1 to 3 characters for your logo',
         name: 'text',
         validate: (input) => {
             if (!validator.isLength(input, { min: 1, max: 3 })) {
@@ -45,9 +45,34 @@ const prompts = [{
                 return true;
             };
         },
-        }];
+}];
+
 
 function createSVG(data) {
+    let svgLogo;
+
+    if (data.shape === "Triangle") {
+        svgLogo = `
+        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        ${svgLogo.renderText()}
+        ${svgLogo.renderTriangle()}
+        </svg>
+        `
+    } else if (data.shape === "Circle") {
+        svgLogo = `
+        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        ${svgLogo.renderText()}
+        ${svgLogo.renderCircle()}
+        </svg>
+        `
+    } else {
+        svgLogo = `
+        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        ${svgLogo.renderText()}
+        ${svgLogo.renderSquare()}
+        </svg>
+        `
+    };
     
 };
 
