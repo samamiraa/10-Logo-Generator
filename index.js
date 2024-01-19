@@ -53,12 +53,14 @@ function createSVG(data) {
    let svgLogo;
 
    if (data.shape === 'Triangle') {
-    svgLogo = new Triangle(data.shapeColor, data.textColor, data.text);
+        svgLogo = new Triangle(data.shapeColor, data.textColor, data.text);
+   } else if (data.shape === 'Circle') {
+        svgLogo = new Circle(data.shapeColor, data.textColor, data.text);
    }
   
    const logoFrame =`
    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-   ${svgLogo.renderTriangle()}
+   ${svgLogo.render()}
    ${svgLogo.renderText()}
    </svg>
    `;

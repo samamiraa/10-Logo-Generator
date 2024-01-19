@@ -1,6 +1,6 @@
 
    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-   <polygon points="150, 18 244, 182 56, 182" stroke="red" fill="red" stroke-width="5"/>
-   <text x="150" y="150" text-anchor="middle" font-size="50px" fill="blue">sam</text>
+   <circle cx="150" cy="100" r="75" stroke="blue" fill="blue" stroke-width="5"/>
+   <text x="153" y="120" text-anchor="middle" font-size="50px" fill="white">MAO</text>
    </svg>
    
