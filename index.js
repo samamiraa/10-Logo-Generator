@@ -2,7 +2,6 @@ const inquirer = require('inquirer');
 const validator = require('validator');
 const fs = require('fs');
 const {Circle, Triangle, Square} = require('./lib/shapes.js');
-const { createDiffieHellmanGroup } = require('crypto');
 
 
 const prompts = [{
