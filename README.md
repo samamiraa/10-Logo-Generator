@@ -12,9 +12,7 @@ Provide a short description explaining the what, why, and how of your project. U
 - What problem does it solve?
 - What did you learn?
 
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents 
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -23,7 +21,9 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+npm install inquirer@8.2.4
+npm install jest
+npm install validator
 
 ## Usage
 
@@ -37,32 +37,28 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
+Thank you to my tutor Andrew who always explains things in the simplest way when im struggling to understand. Thank you to my colleague Shawn who suggested using the npm package validator for validating user input and for also helping debug my code for it when it wasnt working. 
+
 https://www.w3.org/wiki/CSS3/Color/Basic_color_keywords
 https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Texts
 https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-size
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+The MIT License is short and to the point. It lets people do almost anything they want with your project, like making and distributing closed source versions.
 
 ## Badges
 
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+N/A
 
 ## Features
 
-If your project has a lot of features, list them here.
+N/A
 
 ## How to Contribute
 
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+N/A
 
 ## Tests
 
-Go the extra mile and write tests for your application. Then 
+After installing the required packages, navigate to the appropriate folder. Type 'node index.js' in terminal, answer prompts and voila! See the SVG you created in the examples folder.
