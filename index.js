@@ -50,38 +50,26 @@ const prompts = [{
 
 
 function createSVG(data) {
-    console.log(data.shapeColor);
-    if (data.shape === "Triangle") {
-        let svgLogo = new Triangle();
-        svgLogo = `
-        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-        ${svgLogo.renderText()}
-        ${svgLogo.renderTriangle()}
-        </svg>
-        `
-        fs.writeFile('logo.svg', svgLogo, (err) => {
-            if (err) {
-                console.log('Unable to write SVG', err);
-            } else {
-                console.log('Generated logo.svg');
-            };
-        })
-    } else if (data.shape === "Circle") {
-        svgLogo = `
-        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-        ${svgLogo.renderText()}
-        ${svgLogo.renderCircle()}
-        </svg>
-        `
-    } else {
-        svgLogo = `
-        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-        ${svgLogo.renderText()}
-        ${svgLogo.renderSquare()}
-        </svg>
-        `
-    };
+   let svgLogo;
+
+   if (data.shape === 'Triangle') {
+    svgLogo = new Triangle(data.shapeColor, data.textColor, data.text);
+   }
+  
+   const logoFrame =`
+   <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+   ${svgLogo.renderText()}
+   ${svgLogo.renderTriangle()}
+   </svg>
+   `;
     
+   fs.writeFile('logo.svg', logoFrame, (err) => {
+    if (err) {
+        console.log('Unable to write SVG', err);
+    } else {
+        console.log('Generated logo.svg');
+    };
+   });
 };
 
 function init() {
