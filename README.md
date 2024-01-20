@@ -17,9 +17,9 @@ My motivation to complete this project was the make sure I understood OOP. This 
 
 ## Installation
 
-npm install inquirer@8.2.4
-npm install jest
-npm install validator
+npm install inquirer@8.2.4<br>
+npm install jest<br>
+npm install validator<br>
 
 ## Usage
 
@@ -32,8 +32,6 @@ Next the first prompt will appear to input up to 3 characters for your logo<br>
 <img width="1280" alt="character prompt" src="./readmescreenshots/characterprompt.png"><br>
 <br>
 If zero or more than 3 characters are inputted an error appears<br>
-<br>
-<img width="1280" alt="error message" src="./readmescreenshots/error 0 characters.png"><br>
 <br>
 <img width="1280" alt="error message" src="./readmescreenshots/error more than 3.png"><br>
 <br>
