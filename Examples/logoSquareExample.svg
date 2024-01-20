@@ -1,0 +1,6 @@
+
+   <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+   <rect x="84.5" y="70" width="125" height="125" stroke="OLIVE" fill="OLIVE" stroke-width="5"/>
+        <text x="150" y="150" text-anchor="middle" font-size="50px" fill="WHITE">HAM</text>
+   </svg>
+   

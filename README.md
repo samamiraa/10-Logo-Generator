@@ -1,6 +1,7 @@
 # 10-Logo-Generator
 
 Walkthrough video link👇🏼<br>
+https://drive.google.com/file/d/1-Rwmp5lYBxv7xe2mqTj4Lsi8_DgRB3Hj/view
 
 
 ## Description
@@ -42,6 +43,7 @@ Thank you to my tutor Andrew who always explains things in the simplest way when
 https://www.w3.org/wiki/CSS3/Color/Basic_color_keywords
 https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Texts
 https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-size
+https://developer.mozilla.org/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds
 
 ## License
 

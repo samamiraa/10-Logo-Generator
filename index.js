@@ -51,14 +51,15 @@ const prompts = [{
 function createSVG(data) {
    let svgLogo;
    const textUppercase = data.text.toUpperCase();
-   const shapeUppercase
+   const shapeUppercase = data.shapeColor.toUpperCase();
+   const textColorUppercase = data.textColor.toUpperCase();
 
    if (data.shape === 'Triangle') {
-        svgLogo = new Triangle(data.shapeColor, data.textColor, textUppercase);
+        svgLogo = new Triangle(shapeUppercase, textColorUppercase, textUppercase);
    } else if (data.shape === 'Circle') {
-        svgLogo = new Circle(data.shapeColor, data.textColor, textUppercase);
+        svgLogo = new Circle(shapeUppercase, textColorUppercase, textUppercase);
    } else {
-        svgLogo = new Square(data.shapeColor, data.textColor, textUppercase);
+        svgLogo = new Square(shapeUppercase, textColorUppercase, textUppercase);
    }
   
    const logoFrame =`
